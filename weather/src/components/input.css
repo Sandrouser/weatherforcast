@@ -1,0 +1,29 @@
+.maininput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+input {
+  height: 56px;
+  width: 367px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.4);
+  border: 1px solid white;
+  font-size: 20px;
+  padding: 15px;
+  color: white;
+}
+input::placeholder {
+  color: white;
+}
+button {
+  width: 120px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  font-size: 20px;
+  margin-left: 20px;
+}

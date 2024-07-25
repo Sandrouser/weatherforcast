@@ -1,0 +1,40 @@
+.adressdiv {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  margin-top: 30px;
+}
+.avrgdiv {
+  display: flex;
+  color: white;
+  font-size: 35px;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 20px;
+}
+.minp {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.maxp {
+  background-color: cyan;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.weatherdiv {
+  color: white;
+  display: flex;
+  font-size: 40px;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+}
+span {
+  font-size: 20px;
+  display: block;
+}

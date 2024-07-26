@@ -1,0 +1,29 @@
+.daybox {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 180px;
+  width: 136px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 15px;
+  font-size: 24px;
+  padding: 15px 5px;
+  cursor: pointer;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  width: 1030px;
+}
+.border {
+  border: 2px solid black;
+}
+.border-clicked {
+  border: 5px solid white;
+}
+.pic {
+  width: 50px;
+}

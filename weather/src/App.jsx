@@ -2,13 +2,16 @@ import React, { useEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar.jsx";
 import Mainbar from "./components/Mainbar.jsx";
 import Input from "./components/Input.jsx";
+import Day from "./components/Day.jsx";
 
 function App() {
+  const [days, setDays] = useState([]);
   const [weather, setWeather] = useState({});
-
+  const [change, setChange] = useState(0);
+  console.log(change);
   useEffect(() => {
     func1();
-  }, []);
+  }, [change]);
 
   async function func1(a = "tbilisi") {
     const res = await fetch(
@@ -16,17 +19,17 @@ function App() {
     );
     const data = await res.json();
     console.log(data);
+    setDays(data.days);
     setWeather({
-      Day: "Thursday",
-      date: data.days[0].datetime,
-      icon: "../../public/sunny.webp",
-      temp: data.days[0].temp,
-      desc: data.days[0].conditions,
-      maxtemp: ((data.days[0].tempmax - 32) / 1.8).toFixed(),
-      mintemp: ((data.days[0].tempmin - 32) / 1.8).toFixed(),
-      feels: ((data.days[0].feelslike - 32) / 1.8).toFixed(),
-      humidity: data.days[0].humidity,
-      wind: data.days[0].windspeed,
+      date: data.days[change].datetime,
+      icon: data.days[change].icon,
+      temp: data.days[change].temp,
+      desc: data.days[change].conditions,
+      maxtemp: ((data.days[change].tempmax - 32) / 1.8).toFixed(),
+      mintemp: ((data.days[change].tempmin - 32) / 1.8).toFixed(),
+      feels: ((data.days[change].feelslike - 32) / 1.8).toFixed(),
+      humidity: data.days[change].humidity,
+      wind: data.days[change].windspeed,
       place: data.resolvedAddress,
     });
   }
@@ -35,12 +38,15 @@ function App() {
     <div className="div1">
       <div className="div2">
         <div className="div3">
-          <Sidebar weather={weather} />
+          <Sidebar change={change} weather={weather} />
         </div>
         <div className="mainbar">
           <Input loc={func1} />
           <Mainbar info={weather} />
         </div>
+      </div>
+      <div className="divday">
+        <Day changed={change} time={setChange} days={days} />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ function Mainbar({ info }) {
     <div>
       <div className="adressdiv">
         <h1>{info.place}</h1>
-        <img src="../public/location.webp" alt="" />
+        <img src="/location.webp" alt="" />
       </div>
       <div className="avrgdiv">
         <div>
@@ -22,17 +22,17 @@ function Mainbar({ info }) {
         <div>
           <p>{info.feels}°C</p>
           <span>Feels Like</span>
-          <img src="../public/Group.webp" alt="" />
+          <img src="/Group.webp" alt="" />
         </div>
         <div>
           <p>{info.humidity}%</p>
           <span>Humidity</span>
-          <img src="../public/Vector.webp" alt="" />
+          <img src="/Vector.webp" alt="" />
         </div>
         <div>
           <p>{info.wind} m/s</p>
           <span>Wind</span>
-          <img src="../public/Shape.webp" alt="" />
+          <img src="/Shape.webp" alt="" />
         </div>
       </div>
     </div>

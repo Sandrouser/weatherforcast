@@ -31,7 +31,7 @@ function Day({ days, time, changed }) {
             <h2>{((item.temp - 32) / 1.8).toFixed()}°C </h2>
             <img
               className="pic"
-              src={`../../public/weather-icons/${item.icon}.png`}
+              src={`/weather-icons/${item.icon}.png`}
               alt=""
             />
           </div>

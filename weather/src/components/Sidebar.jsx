@@ -26,7 +26,7 @@ function Sidebar({ weather, change }) {
     <div className="side">
       <h1>{func1(change)}</h1>
       <p>{weather.date}</p>
-      <img src={`../../public/weather-icons/${weather.icon}.png`} alt="" />
+      <img src={`/weather-icons/${weather.icon}.png`} alt="" />
       <h2>{Celsius.toFixed()}°C</h2>
       <h3>{weather.desc}</h3>
     </div>
